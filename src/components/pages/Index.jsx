@@ -97,7 +97,7 @@ const projects = [
     title: "Weather APP",
     description: "A sleek Figma Design showcasing my skills and projects.",
     image: "/app.png",
-    link: "https://weather-app-flax-three-51.vercel.app/",
+    link: "https://weather-app-swart-seven-92.vercel.app/",
   },
   {
     title: "Theory",
