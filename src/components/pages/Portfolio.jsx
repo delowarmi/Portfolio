@@ -2,22 +2,60 @@ import React from "react";
 import { motion } from "framer-motion";
 const projects = [
   {
+    title: "E-Commerce Website",
+    description:
+      "A full-stack e-commerce website built with React, Firebase, and Tailwind CSS.",
+    image: "/src/assets/Orebi.png",
+    link: "https://orebi-e-commerce-with-responsive.vercel.app/",
+  },
+  {
     title: "Portfolio Website",
-    description: "A modern and responsive portfolio website built with React and Tailwind CSS.",
-    image: "https://source.unsplash.com/400x300/?technology",
-    link: "#",
+    description:
+      "A sleek personal portfolio showcasing my skills and projects.",
+    image: "/src/assets/portfolio.png",
+    link: "https://portfolio-bagv6xcie-delowarmis-projects.vercel.app/",
   },
   {
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce platform with secure payment integration.",
-    image: "https://source.unsplash.com/400x300/?shopping",
-    link: "#",
+    title: "Figma Design-1",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma4.png",
+    link: "https://delowarmi.github.io/project-03/",
   },
   {
-    title: "Dashboard UI",
-    description: "An interactive dashboard UI with real-time analytics and charts.",
-    image: "https://source.unsplash.com/400x300/?dashboard",
-    link: "#",
+    title: "Figma Design-2",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma2.png",
+    link: "https://delowarmi.github.io/tailwind-2/#",
+  },
+  {
+    title: "Figma Design-3",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma3.png",
+    link: "https://delowarmi.github.io/project04/",
+  },
+  {
+    title: "Figma Design-4",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma.png",
+    link: "https://innovet-react-pi.vercel.app/",
+  },
+  {
+    title: "Weather APP",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/app.png",
+    link: "https://weather-app-flax-three-51.vercel.app/",
+  },
+  {
+    title: "Theory",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/theory.png",
+    link: "https://delowarmi.github.io/World/",
+  },
+  {
+    title: "House",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/house.png",
+    link: "https://delowarmi.github.io/house-1/",
   },
 ];
 

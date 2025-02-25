@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "/src/assets/profile.png";
+import aboutPic from "/src/assets/bg-removebg-preview.png"; 
 
 const skills = ["HTML", "CSS", "Bootstrap", "Tailwind", "React.js", "Next.js"];
 
@@ -15,7 +15,7 @@ const About = () => {
         >
           <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-1 animate-pulse">
             <img
-              src={profilePic}
+              src={aboutPic}
               alt="Profile"
               className="w-full h-full rounded-full border-4 border-gray-900"
             />

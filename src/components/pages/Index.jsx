@@ -59,21 +59,57 @@ const projects = [
     title: "E-Commerce Website",
     description:
       "A full-stack e-commerce website built with React, Firebase, and Tailwind CSS.",
-    image: "https://source.unsplash.com/400x300/?ecommerce,website",
+    image: "/src/assets/Orebi.png",
     link: "https://orebi-e-commerce-with-responsive.vercel.app/",
   },
   {
     title: "Portfolio Website",
     description:
       "A sleek personal portfolio showcasing my skills and projects.",
-    image: "https://source.unsplash.com/400x300/?portfolio,website",
+    image: "/src/assets/portfolio.png",
     link: "https://portfolio-bagv6xcie-delowarmis-projects.vercel.app/",
   },
   {
-    title: "Dashboard UI",
-    description: "An interactive admin dashboard with charts and analytics.",
-    image: "https://source.unsplash.com/400x300/?dashboard,ui",
-    link: "#",
+    title: "Figma Design-1",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma4.png",
+    link: "https://delowarmi.github.io/project-03/",
+  },
+  {
+    title: "Figma Design-2",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma2.png",
+    link: "https://delowarmi.github.io/tailwind-2/#",
+  },
+  {
+    title: "Figma Design-3",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma3.png",
+    link: "https://delowarmi.github.io/project04/",
+  },
+  {
+    title: "Figma Design-4",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/figma.png",
+    link: "https://innovet-react-pi.vercel.app/",
+  },
+  {
+    title: "Weather APP",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/app.png",
+    link: "https://weather-app-flax-three-51.vercel.app/",
+  },
+  {
+    title: "Theory",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/theory.png",
+    link: "https://delowarmi.github.io/World/",
+  },
+  {
+    title: "House",
+    description: "A sleek Figma Design showcasing my skills and projects.",
+    image: "/src/assets/house.png",
+    link: "https://delowarmi.github.io/house-1/",
   },
 ];
 
@@ -111,6 +147,27 @@ const Home = () => {
         },
       );
   };
+
+  const project = [
+    {
+      id: 1,
+      title: "Orebi e-Commerce",
+      description: "A full-featured e-commerce platform with payment gateway.",
+      image: "/src/assets/Orebi.png",
+    },
+    {
+      id: 2,
+      title: "Portfolio Website",
+      description: "A modern portfolio showcasing skills and projects.",
+      image: "/src/assets/portfolio.png",
+    },
+    {
+      id: 3,
+      title: "Figma",
+      description: "A fully responsive Figma platform with rich text editor.",
+      image: "/src/assets/figma4.png",
+    },
+  ];
 
   return (
     <>
@@ -213,37 +270,38 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mt-10 text-center">
-  <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {[1, 2, 3].map((project) => (
-      <div
-        key={project}
-        className="relative p-6 bg-gray-800 rounded-lg border-4 border-gray-600 overflow-hidden"
-      >
-        
-        <motion.div
-          className="absolute inset-0 rounded-lg"
-          style={{
-            background: "conic-gradient(from 0deg, rgba(255,0,0,0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5), rgba(255,255,0,0.5), rgba(255,0,255,0.5), rgba(255,0,0,0.5))",
-            mixBlendMode: "soft-light",
-            opacity: 0.8,
-          }}
-          animate={{ rotate: 360 }}
-          transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
-        ></motion.div>
-
-    
-        <div className="relative z-10 text-white">
-          <h3 className="text-lg font-semibold">Project {project}</h3>
-          <p className="text-gray-400">A brief description of the project.</p>
-        </div>
+<section className="mt-10 text-center">
+      <h2 className="text-2xl font-semibold mb-4 text-white">Projects</h2>
+      <div className="max-w-[1320px] w-full mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {project.map((project) => (
+          <div
+            key={project.id}
+            className="relative p-6 bg-gray-800 rounded-lg border-4 border-gray-600 overflow-hidden"
+          >
+            <motion.div
+              className="absolute inset-0 rounded-lg"
+              style={{
+                background:
+                  "conic-gradient(from 0deg, rgba(255,0,0,0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5), rgba(255,255,0,0.5), rgba(255,0,255,0.5), rgba(255,0,0,0.5))",
+                mixBlendMode: "soft-light",
+                opacity: 0.8,
+              }}
+              animate={{ rotate: 360 }}
+              transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            ></motion.div>
+            <div className="relative z-10 text-white">
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-40 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-lg font-semibold">{project.title}</h3>
+              <p className="text-gray-400">{project.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
-
-
+    </section>
       </div>
 
       <div className="min-h-screen bg-gray-900 text-white px-6 py-10 flex items-center justify-center">
