@@ -59,56 +59,56 @@ const projects = [
     title: "E-Commerce Website",
     description:
       "A full-stack e-commerce website built with React, Firebase, and Tailwind CSS.",
-    image: "./src/assets/Orebi.png",
+    image: "/Orebi.png",
     link: "https://orebi-e-commerce-with-responsive.vercel.app/",
   },
   {
     title: "Portfolio Website",
     description:
       "A sleek personal portfolio showcasing my skills and projects.",
-    image: "./src/assets/portfolio.png",
+    image: "/portfolio.png",
     link: "https://portfolio-bagv6xcie-delowarmis-projects.vercel.app/",
   },
   {
     title: "Figma Design-1",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/figma4.png",
+    image: "/figma4.png",
     link: "https://delowarmi.github.io/project-03/",
   },
   {
     title: "Figma Design-2",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/figma2.png",
+    image: "/figma2.png",
     link: "https://delowarmi.github.io/tailwind-2/#",
   },
   {
     title: "Figma Design-3",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/figma3.png",
+    image: "/figma3.png",
     link: "https://delowarmi.github.io/project04/",
   },
   {
     title: "Figma Design-4",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/figma.png",
+    image: "/figma.png",
     link: "https://innovet-react-pi.vercel.app/",
   },
   {
     title: "Weather APP",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/app.png",
+    image: "/app.png",
     link: "https://weather-app-flax-three-51.vercel.app/",
   },
   {
     title: "Theory",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/theory.png",
+    image: "/theory.png",
     link: "https://delowarmi.github.io/World/",
   },
   {
     title: "House",
     description: "A sleek Figma Design showcasing my skills and projects.",
-    image: "./src/assets/house.png",
+    image: "/house.png",
     link: "https://delowarmi.github.io/house-1/",
   },
 ];
@@ -153,19 +153,19 @@ const Home = () => {
       id: 1,
       title: "Orebi e-Commerce",
       description: "A full-featured e-commerce platform with payment gateway.",
-      image: "../src/assets/Orebi.png",
+      image: "/Orebi.png",
     },
     {
       id: 2,
       title: "Portfolio Website",
       description: "A modern portfolio showcasing skills and projects.",
-      image: "../src/assets/portfolio.png",
+      image: "/portfolio.png",
     },
     {
       id: 3,
       title: "Figma",
       description: "A fully responsive Figma platform with rich text editor.",
-      image: "../src/assets/figma4.png",
+      image: "/figma4.png",
     },
   ];
 
