@@ -1,0 +1,16 @@
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
+    }
+    50% {
+      box-shadow: 0 0 15px #8e44ad, 0 0 20px #8e44ad, 0 0 25px #8e44ad;
+    }
+    100% {
+      box-shadow: 0 0 5px #3498db, 0 0 10px #3498db, 0 0 15px #3498db;
+    }
+  }
+  
+  .animate-pulse {
+    animation: glow 1.5s infinite alternate;
+  }
+  
