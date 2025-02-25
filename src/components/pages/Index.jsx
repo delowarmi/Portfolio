@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope ,FaFacebook} from "react-icons/fa";
 import profilePic from "/src/assets/profile.png"; 
 import aboutPic from "/src/assets/bg-removebg-preview.png"; 
 import { FaCode, FaMobileAlt } from "react-icons/fa";
@@ -217,11 +217,18 @@ const Home = () => {
                     <FaLinkedin />
                   </a>
                   <a
+                    href="https://www.facebook.com/md.delowarhossenmi"
+                    className="text-[40px] text-blue-400"
+                  >
+                    <FaFacebook />
+                  </a>
+                  <a
                     href="mailto:md48735002@gmail.com"
                     className="text-[40px] text-blue-400"
                   >
                     <FaEnvelope />
                   </a>
+
                 </div>
 
                 <div className="flex items-center gap-3 p-4 bg-gray-900 rounded-lg shadow-lg relative">
