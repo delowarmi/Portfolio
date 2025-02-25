@@ -48,7 +48,7 @@ const services = [
     },
     {
       title: "Wordpress (CMS) Custom Design",
-      description: "I build responsive and high-performance Template Design using modern technologies like React, Next.js, and Tailwind CSS.",
+      description: "I build responsive and high-performance Wordpress (CMS) Custom Design using modern technologies like Pluging, Theam, and Custom Theam",
       icon: <DiWordpress/>,
       color: "from-pink-500 to-red-500",
     },
