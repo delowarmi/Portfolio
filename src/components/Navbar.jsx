@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 py-4 px-6">
+    <nav className="bg-gray-900 py-4 px-6 z-40">
       <div className="max-w-[1320px] mx-auto flex justify-between items-center">
      
         <Link to="/" className="text-white text-2xl font-bold">
@@ -79,7 +79,7 @@ const Navbar = () => {
       </div>
 
       <div
-        className={`md:hidden absolute top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
+        className={`md:hidden absolute z-50 top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
           isOpen ? "h-auto opacity-100 py-4" : "h-0 opacity-0 overflow-hidden"
         }`}
       >

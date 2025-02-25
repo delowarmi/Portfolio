@@ -1,6 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCode, FaPaintBrush, FaMobileAlt } from "react-icons/fa";
+import { FaCode, FaMobileAlt ,FaFigma  } from "react-icons/fa";
+import { FcTemplate } from "react-icons/fc";
+import { MdOutlineWeb } from "react-icons/md";
+import { DiWordpress } from "react-icons/di";
 
 const services = [
   {
@@ -10,15 +13,33 @@ const services = [
     color: "from-blue-500 to-purple-500",
   },
   {
-    title: "UI/UX Design",
-    description: "Creating stunning, user-friendly, and interactive UI designs with Figma, Adobe XD, and modern CSS frameworks.",
-    icon: <FaPaintBrush />,
+    title: "Figma to HTML Design",
+    description: "I build responsive and high-performance HTML Design using modern technologies like React, Next.js, and Tailwind CSS.",
+    icon: <FaFigma  />,
     color: "from-green-500 to-teal-500",
   },
   {
     title: "Mobile App Development",
     description: "Building cross-platform mobile applications using React Native with a focus on performance and smooth UX.",
     icon: <FaMobileAlt />,
+    color: "from-pink-500 to-red-500",
+  },
+  {
+    title: "Web  Design",
+    description: "I build responsive and high-performance Web Design using modern technologies like React, Next.js, and Tailwind CSS.",
+    icon: <MdOutlineWeb/>,
+    color: "from-pink-500 to-red-500",
+  },
+  {
+    title: "Web Template Design",
+    description: "I build responsive and high-performance Template Design using modern technologies like React, Next.js, and Tailwind CSS.",
+    icon: <FcTemplate/>,
+    color: "from-pink-500 to-red-500",
+  },
+  {
+    title: "Wordpress (CMS) Custom Design",
+    description: "I build responsive and high-performance Template Design using modern technologies like React, Next.js, and Tailwind CSS.",
+    icon: <DiWordpress/>,
     color: "from-pink-500 to-red-500",
   },
 ];
@@ -37,6 +58,8 @@ const Service = () => {
         <p className="text-lg text-gray-400 mt-2 text-center">
           Here are the services I provide to help grow your business.
         </p>
+
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {services.map((service, index) => (
             <motion.div
@@ -44,25 +67,30 @@ const Service = () => {
               className="relative p-6 rounded-xl bg-gray-800 border border-gray-600 flex flex-col items-center text-center overflow-hidden"
               whileHover={{ scale: 1.05 }}
             >
+   
+              <motion.div className="absolute inset-0 border-[3px] rounded-xl border-gray-600" />
+
+ 
               <motion.div
-                className="absolute inset-0 border-[3px] rounded-xl border-gray-600"
-              />
+                className="absolute inset-0 rounded-xl blur-xl opacity-60"
+                style={{
+                  background: "conic-gradient(from 0deg, rgba(255,0,0,0.5), rgba(0,255,0,0.5), rgba(0,0,255,0.5), rgba(255,255,0,0.5), rgba(255,0,255,0.5), rgba(255,0,0,0.5))",
+                  maskImage: "radial-gradient(circle, rgba(255,255,255,1) 30%, rgba(255,255,255,0) 70%)",
+                }}
+                animate={{ rotate: 360 }}
+                transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
+              ></motion.div>
+
+        
               <motion.div
-                className="absolute inset-0 rounded-xl"
+                className="absolute inset-0 rounded-xl border-[3px]"
                 animate={{
-                  background: [
-                    "linear-gradient(0deg, rgba(255,0,0,0.3), rgba(255,0,0,0))",
-                    "linear-gradient(90deg, rgba(0,255,0,0.3), rgba(0,255,0,0))",
-                    "linear-gradient(180deg, rgba(0,0,255,0.3), rgba(0,0,255,0))",
-                    "linear-gradient(270deg, rgba(255,0,255,0.3), rgba(255,0,255,0))",
-                  ],
+                  borderColor: ["#ff0000", "#00ff00", "#0000ff", "#ff00ff", "#ff0000"],
                 }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
+                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
+
+              
               <div className={`relative z-10 text-5xl p-4 rounded-full bg-gradient-to-r ${service.color} text-white`}>
                 {service.icon}
               </div>
@@ -73,6 +101,7 @@ const Service = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

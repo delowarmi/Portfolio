@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "/src/assets/profile.png"; // Ensure correct path
+import profilePic from "/src/assets/profile.png";
 
 const skills = ["HTML", "CSS", "Bootstrap", "Tailwind", "React.js", "Next.js"];
 

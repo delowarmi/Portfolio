@@ -1,23 +1,22 @@
 import React from "react";
 import { motion } from "framer-motion";
-
 const projects = [
   {
-    title: "E-Commerce Website",
-    description: "A full-stack e-commerce website built with React, Firebase, and Tailwind CSS.",
-    image: "https://source.unsplash.com/400x300/?ecommerce,website",
-    link: "https://orebi-e-commerce-with-responsive.vercel.app/",
+    title: "Portfolio Website",
+    description: "A modern and responsive portfolio website built with React and Tailwind CSS.",
+    image: "https://source.unsplash.com/400x300/?technology",
+    link: "#",
   },
   {
-    title: "Portfolio Website",
-    description: "A sleek personal portfolio showcasing my skills and projects.",
-    image: "https://source.unsplash.com/400x300/?portfolio,website",
+    title: "E-Commerce Platform",
+    description: "A full-stack e-commerce platform with secure payment integration.",
+    image: "https://source.unsplash.com/400x300/?shopping",
     link: "#",
   },
   {
     title: "Dashboard UI",
-    description: "An interactive admin dashboard with charts and analytics.",
-    image: "https://source.unsplash.com/400x300/?dashboard,ui",
+    description: "An interactive dashboard UI with real-time analytics and charts.",
+    image: "https://source.unsplash.com/400x300/?dashboard",
     link: "#",
   },
 ];
@@ -39,18 +38,31 @@ const Portfolio = () => {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="p-4 bg-gray-800 rounded-xl shadow-lg border border-transparent relative overflow-hidden"
+            className="p-4 bg-gray-800 rounded-xl shadow-lg border border-gray-600 relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
             <motion.div className="absolute inset-0 border-2 rounded-xl border-gray-600" />
             <motion.div
-              className="absolute inset-0 rounded-xl"
+              className="absolute w-6 h-6 bg-yellow-500 rounded-full shadow-2xl"
+              style={{ filter: "blur(8px)" }}
+              animate={{
+                x: ["0%", "100%", "100%", "0%", "0%"],
+                y: ["0%", "0%", "100%", "100%", "0%"],
+              }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+            <motion.div
+              className="absolute inset-0 rounded-xl opacity-20"
               animate={{
                 background: [
-                  "linear-gradient(0deg, rgba(255,0,0,0.3), rgba(255,0,0,0))",
-                  "linear-gradient(90deg, rgba(0,255,0,0.3), rgba(0,255,0,0))",
-                  "linear-gradient(180deg, rgba(0,0,255,0.3), rgba(0,0,255,0))",
-                  "linear-gradient(270deg, rgba(255,0,255,0.3), rgba(255,0,255,0))",
+                  "linear-gradient(0deg, rgba(255,255,0,0.3), rgba(255,255,0,0))",
+                  "linear-gradient(90deg, rgba(0,255,255,0.3), rgba(0,255,255,0))",
+                  "linear-gradient(180deg, rgba(255,0,255,0.3), rgba(255,0,255,0))",
+                  "linear-gradient(270deg, rgba(255,255,0,0.3), rgba(255,255,0,0))",
                 ],
               }}
               transition={{
