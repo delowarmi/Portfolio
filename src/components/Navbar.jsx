@@ -89,6 +89,11 @@ const Navbar = () => {
           <NavItem to="/service" label="Service" onClick={toggleNavbar} />
           <NavItem to="/portfolio" label="portfolio" onClick={toggleNavbar} />
           <NavItem to="/contact" label="Contact" onClick={toggleNavbar} />
+        <Link to="mailto:md48735002@gmail.com">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
+              Hire Me
+            </button>
+          </Link>
         </ul>
       </div>
     </nav>
