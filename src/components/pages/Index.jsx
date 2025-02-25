@@ -153,19 +153,19 @@ const Home = () => {
       id: 1,
       title: "Orebi e-Commerce",
       description: "A full-featured e-commerce platform with payment gateway.",
-      image: "./src/assets/Orebi.png",
+      image: "../src/assets/Orebi.png",
     },
     {
       id: 2,
       title: "Portfolio Website",
       description: "A modern portfolio showcasing skills and projects.",
-      image: "./src/assets/portfolio.png",
+      image: "../src/assets/portfolio.png",
     },
     {
       id: 3,
       title: "Figma",
       description: "A fully responsive Figma platform with rich text editor.",
-      image: "./src/assets/figma4.png",
+      image: "../src/assets/figma4.png",
     },
   ];
 
