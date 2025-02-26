@@ -7,7 +7,7 @@ const skills = ["HTML", "CSS",'JavaScript', "Bootstrap", "Tailwind", "React.js",
 const About = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white px-6 py-10 flex items-center justify-center">
-      <div className="w-full max-w-[1320px] mx-auto flex flex-col md:flex-row items-center gap-10">
+      <div className="w-full max-w-[1320px] mx-auto flex flex-col lg:flex-row items-center gap-10">
         
         <motion.div
           className="relative w-full md:w-1/2 flex justify-center"
@@ -21,7 +21,7 @@ const About = () => {
             />
           </div>
         </motion.div>
-        <div className="w-full md:w-1/2 text-center md:text-left">
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <motion.h1
             className="text-4xl font-bold"
             initial={{ opacity: 0, y: -50 }}
