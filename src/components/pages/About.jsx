@@ -13,7 +13,7 @@ const About = () => {
           className="relative w-full md:w-1/2 flex justify-center"
           whileHover={{ scale: 1.05 }}
         >
-          <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-1 animate-pulse">
+          <div className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-1 animate-pulse">
             <img
               src={aboutPic}
               alt="Profile"
@@ -30,8 +30,9 @@ const About = () => {
             About Me
           </motion.h1>
           <p className="text-lg text-gray-400 mt-2">
-            Hi, I'm <span className="text-blue-400">Md Delowar Hosen MI</span>, a passionate Web Designer and React Developer. I love building interactive and visually appealing websites.
+            Hi, I'm <span className="text-blue-400 font-medium">Md Delowar Hosen MI</span>,I have completed a Diploma in Computer Science and Engineering (CSE). I am passionate about web design and development, with experience in React, Firebase, and modern UI/UX principles. I enjoy creating interactive and user-friendly websites while continuously learning new technologies. I have worked on various projects, including authentication systems, payment gateway integrations, and e-commerce functionalities using Redux. My goal is to enhance my skills and build innovative digital solutions. I am always eager to explore new challenges and improve my expertise in web development. a passionate Web Designer and React Developer. I love building interactive and visually appealing websites.
           </p>
+     
           <h2 className="text-2xl font-semibold mt-6">Skills</h2>
           <div className="flex justify-start gap-4 flex-wrap mt-4">
             {skills.map((skill, index) => (
