@@ -13,7 +13,7 @@ const projects = [
     description:
       "A sleek personal portfolio showcasing my skills and projects.",
     image: "/portfolio.png",
-    link: "https://portfolio-bagv6xcie-delowarmis-projects.vercel.app/",
+    link: "https://portfolio-delowarmis-projects.vercel.app/",
   },
   {
     title: "Figma Design-1",
