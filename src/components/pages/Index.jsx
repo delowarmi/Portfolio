@@ -43,9 +43,9 @@ const Home = () => {
       {/* Hero Section */}
       <div className="min-h-screen bg-gray-900 text-white px-6 py-10 flex items-center justify-center flex-col">
         <section className="flex flex-col lg:flex-row-reverse items-center justify-between w-full max-w-6xl">
-          <motion.div className="relative w-full lg:w-1/2 flex justify-center">
-            <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden border-4 border-transparent bg-gradient-to-r from-blue-500 to-purple-500 p-1 animate-pulse">
-              <img src={profilePic} alt="Profile" className="w-full h-full rounded-full border-4 border-gray-900" />
+          <motion.div className="relative w-full lg:w-1/2 flex justify-center mt-16">
+            <div className="relative w-[500px] h-[500px] rounded-full overflow-hidden border-4 border-transparent  bg-transparent from-blue-500 to-purple-500 p-1 animate-pulse">
+              <img src={profilePic} alt="Profile" className="w-full h-full rounded-full border-4 border-gray-500" />
             </div>
           </motion.div>
 
