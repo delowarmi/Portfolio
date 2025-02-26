@@ -36,32 +36,32 @@ const Navbar = () => {
         isScrolled ? "bg-gray-900 shadow-lg py-0" : "bg-transparent py-4"
       }`}
     >
-      <div className="max-w-[1320px] mx-auto flex justify-between items-center px-6">
+      <div className="max-w-[1320px] mx-auto flex justify-between items-center px-4 sm:px-6">
         {/* Logo */}
-        <Link to="/" className="text-white text-2xl font-bold">
-          <div className="flex items-center justify-center h-20">
+        <Link to="/" className="text-white text-xl sm:text-2xl font-bold">
+          <div className="flex items-center justify-center h-16 sm:h-20">
             <svg
-              width="350"
-              height="60"
-              viewBox="0 0 350 60"
+              width="250"
+              height="50"
+              viewBox="0 0 250 50"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <text
                 x="10"
-                y="40"
+                y="30"
                 fontFamily="Arial, sans-serif"
-                fontSize="24"
+                fontSize="18"
                 fontWeight="bold"
                 fill="url(#gradient)"
               >
                 Md Delowar
               </text>
               <text
-                x="150"
-                y="40"
+                x="110"
+                y="30"
                 fontFamily="Arial, sans-serif"
-                fontSize="24"
+                fontSize="18"
                 fontWeight="bold"
                 fill="#00D8FF"
               >
@@ -79,7 +79,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden lg:flex flex-1 justify-center">
-          <ul className="flex space-x-6">
+          <ul className="flex space-x-4 sm:space-x-6">
             <NavItem to="/" label="Home" />
             <NavItem to="/about" label="About" />
             <NavItem to="/service" label="Service" />
@@ -91,7 +91,7 @@ const Navbar = () => {
         {/* Hire Me Button */}
         <div className="hidden lg:block">
           <Link to="mailto:md48735002@gmail.com">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 sm:px-5 rounded-lg transition-all duration-300">
               Hire Me
             </button>
           </Link>
@@ -99,7 +99,7 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <button onClick={toggleNavbar} className="block lg:hidden text-white">
-          {isOpen ? <X size={30} /> : <Menu size={30} />}
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
@@ -109,7 +109,7 @@ const Navbar = () => {
           isOpen ? "h-auto opacity-100 py-4" : "h-0 opacity-0 overflow-hidden"
         }`}
       >
-        <ul className="flex flex-col items-center space-y-4">
+        <ul className="flex flex-col items-center space-y-3 sm:space-y-4">
           <NavItem to="/" label="Home" onClick={toggleNavbar} />
           <NavItem to="/about" label="About" onClick={toggleNavbar} />
           <NavItem to="/service" label="Service" onClick={toggleNavbar} />
@@ -119,7 +119,7 @@ const Navbar = () => {
           {/* Mobile Hire Me Button */}
           <div className="lg:hidden">
             <Link to="mailto:md48735002@gmail.com">
-              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300">
                 Hire Me
               </button>
             </Link>
@@ -136,7 +136,7 @@ const NavItem = ({ to, label, onClick }) => {
       <Link
         to={to}
         onClick={onClick}
-        className="text-white text-lg font-medium hover:text-blue-400 transition duration-300"
+        className="text-white text-base sm:text-lg font-medium hover:text-blue-400 transition duration-300"
       >
         {label}
       </Link>

@@ -55,11 +55,12 @@ const Home = () => {
             </motion.h1>
             <p className="text-lg text-gray-400 mt-2">Web Designer | React Developer | Freelancer</p>
 
-            <section className="mt-6 flex gap-x-6 justify-center lg:justify-start">
+            <section className="mt-6  flex  lg:gap-x-6 justify-center lg:justify-start">
+              <div className=" flex gap-x-2 lg:gap-x-6 justify-center lg:justify-start">
               <a href="https://github.com/delowarmi" className="text-[40px] text-blue-400"><FaGithub /></a>
               <a href="https://www.linkedin.com/in/md-delowar-hossen-mi-54a462324/" className="text-[40px] text-blue-400"><FaLinkedin /></a>
               <a href="https://www.facebook.com/md.delowarhossenmi" className="text-[40px] text-blue-400"><FaFacebook /></a>
-              <a href="mailto:md48735002@gmail.com" className="text-[40px] text-blue-400"><FaEnvelope /></a>
+              <a href="mailto:md48735002@gmail.com" className="text-[40px] text-blue-400"><FaEnvelope /></a></div>
               <div className=" flex items-center gap-x-3 -mt-[15px] p-4 bg-gray-900 rounded-lg shadow-lg relative">
                   <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500 to-purple-500 blur-xl opacity-40"></div>
                   <span className="text-white text-lg font-semibold relative z-10">Download CV</span>
