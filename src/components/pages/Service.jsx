@@ -12,7 +12,7 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const CustomPrevArrow = ({ onClick }) => (
   <div
-    className="absolute left-[-50px] top-1/2 transform -translate-y-1/2 bg-gray-700 p-4 rounded-full cursor-pointer z-10"
+    className="absolute left-[10px] top-1/2 transform -translate-y-1/2 bg-gray-700 p-4 rounded-full cursor-pointer z-10"
     onClick={onClick}
   >
     <IoIosArrowBack className="text-3xl text-white" />
@@ -21,7 +21,7 @@ const CustomPrevArrow = ({ onClick }) => (
 
 const CustomNextArrow = ({ onClick }) => (
   <div
-    className="absolute right-[-50px] top-1/2 transform -translate-y-1/2 bg-gray-700 p-4 rounded-full cursor-pointer z-10"
+    className="absolute right-[10px] top-1/2 transform -translate-y-1/2 bg-gray-700 p-4 rounded-full cursor-pointer z-10"
     onClick={onClick}
   >
     <IoIosArrowForward className="text-3xl text-white" />

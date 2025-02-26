@@ -77,6 +77,4 @@ const TechnologySkills = () => {
     );
 };
 
-
-
 export default TechnologySkills;

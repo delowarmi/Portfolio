@@ -40,11 +40,11 @@ const Portfolio = () => {
       <p className="text-lg text-gray-400 mt-2 text-center">Here are some of my recent projects.</p>
 
       {/* Category Filter Buttons */}
-      <div className="flex gap-4 mt-6">
+      <div className="flex gap-x-3 md:gap-x-4 mt-10">
         {categories.map((category) => (
           <button
             key={category}
-            className={`px-4 py-2 rounded-lg text-white transition-all duration-300 ${
+            className={`md:px-4 md:py-2 px-2 py-0 rounded-lg text-white transition-all duration-300 ${
               selectedCategory === category ? "bg-orange-600 shadow-lg" : "bg-gray-800 hover:bg-gray-700"
             }`}
             onClick={() => { setSelectedCategory(category); setCurrentPage(1); }}
