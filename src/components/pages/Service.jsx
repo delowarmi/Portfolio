@@ -97,7 +97,7 @@ const Service = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-6 py-10 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-900 text-white px-6  py-20 flex flex-col items-center">
       <div className="w-full max-w-[1320px] mx-auto">
         <motion.h1
           className="text-4xl font-bold text-center"

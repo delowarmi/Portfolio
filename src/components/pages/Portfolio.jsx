@@ -29,7 +29,7 @@ const Portfolio = () => {
   const displayedProjects = filteredProjects.slice(startIndex, startIndex + itemsPerPage);
 
   return (
-    <div className="min-h-screen bg-gray-900 text-white px-6 pb-10 flex flex-col items-center">
+    <div className="min-h-screen bg-gray-900 text-white px-6 pt-20 flex flex-col items-center">
       <motion.h1
         className="text-4xl font-bold text-center"
         initial={{ opacity: 0, y: -50 }}
