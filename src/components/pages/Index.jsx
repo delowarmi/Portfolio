@@ -9,6 +9,7 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Skills from "../Skills";
 import TechnologySkills from "../TechnologySkills";
+import Messenger from "../Messenger";
 
 const skills = ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React.js", "Next.js"];
 const projects = [
@@ -125,9 +126,9 @@ const Home = () => {
       
 
       {/* Scroll Progress Indicator  */}
-      <div className="fixed bottom-10 right-10 z-50">
+      <div className="fixed bottom-4 right-4 z-50">
       <motion.div
-      className="fixed bottom-10 right-10 z-50"
+      className="fixed bottom-4 right-4 z-50"
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.5 }}
       transition={{ duration: 0.3 }}
@@ -150,6 +151,7 @@ const Home = () => {
         <span className="absolute text-white text-sm font-bold">{Math.round(scrollProgress)}%</span>
       </motion.div>
     </motion.div>
+    <Messenger />
       </div>
     </>
   );
