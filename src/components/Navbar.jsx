@@ -11,8 +11,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-gray-900 py-4 px-6 z-40">
-      <div className=" max-w-[1320px] mx-auto flex justify-between items-center">
-     
+      <div className="max-w-[1320px] mx-auto flex justify-between items-center">
+        {/* Logo */}
         <Link to="/" className="text-white text-2xl font-bold">
           <div className="flex items-center justify-center h-20">
             <svg
@@ -52,19 +52,19 @@ const Navbar = () => {
           </div>
         </Link>
 
-        
-        <div className="hidden md:flex flex-1 justify-center">
+        {/* Desktop Menu (lg থেকে বড় হলে দেখাবে) */}
+        <div className="hidden lg:flex flex-1 justify-center">
           <ul className="flex space-x-6">
             <NavItem to="/" label="Home" />
             <NavItem to="/about" label="About" />
             <NavItem to="/service" label="Service" />
-            <NavItem to="/portfolio" label="portfolio" />
+            <NavItem to="/portfolio" label="Portfolio" />
             <NavItem to="/contact" label="Contact" />
           </ul>
         </div>
 
-     
-        <div className="hidden md:block">
+        {/* Hire Me Button (lg স্ক্রিনে দেখাবে) */}
+        <div className="hidden lg:block">
           <Link to="mailto:md48735002@gmail.com">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
               Hire Me
@@ -72,14 +72,15 @@ const Navbar = () => {
           </Link>
         </div>
 
-     
-        <button onClick={toggleNavbar} className="md:hidden text-white">
+        {/* Mobile Menu Button (sm & md স্ক্রিনে দেখাবে) */}
+        <button onClick={toggleNavbar} className="block lg:hidden text-white">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
+      {/* Mobile Menu (sm & md স্ক্রিনে দেখাবে) */}
       <div
-        className={`md:hidden absolute z-50 top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
+        className={`lg:hidden absolute z-50 top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
           isOpen ? "h-auto opacity-100 py-4" : "h-0 opacity-0 overflow-hidden"
         }`}
       >
@@ -87,19 +88,22 @@ const Navbar = () => {
           <NavItem to="/" label="Home" onClick={toggleNavbar} />
           <NavItem to="/about" label="About" onClick={toggleNavbar} />
           <NavItem to="/service" label="Service" onClick={toggleNavbar} />
-          <NavItem to="/portfolio" label="portfolio" onClick={toggleNavbar} />
+          <NavItem to="/portfolio" label="Portfolio" onClick={toggleNavbar} />
           <NavItem to="/contact" label="Contact" onClick={toggleNavbar} />
-        <Link to="mailto:md48735002@gmail.com">
-            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
-              Hire Me
-            </button>
-          </Link>
+
+          {/* Mobile Hire Me Button */}
+          <div className="lg:hidden">
+            <Link to="mailto:md48735002@gmail.com">
+              <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
+                Hire Me
+              </button>
+            </Link>
+          </div>
         </ul>
       </div>
     </nav>
   );
 };
-
 
 const NavItem = ({ to, label, onClick }) => {
   return (

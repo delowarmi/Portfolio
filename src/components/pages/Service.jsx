@@ -64,7 +64,7 @@ const Service = () => {
             <motion.div
               key={index}
               className="relative p-6 rounded-xl bg-gray-800 border border-gray-600 flex flex-col items-center text-center overflow-hidden"
-              whileHover={{ scale: 1.25, rotateX: -20, translateY: -20 }}
+              whileHover={{ scale: 1.15, rotateX: -20, translateY: -20 }}
             >
               <motion.div className="absolute inset-0 border-[3px] rounded-xl border-gray-600" />
 

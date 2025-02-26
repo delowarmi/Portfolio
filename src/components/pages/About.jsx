@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import aboutPic from "/src/assets/bg-removebg-preview.png"; 
 
-const skills = ["HTML", "CSS", "Bootstrap", "Tailwind", "React.js", "Next.js"];
+const skills = ["HTML", "CSS",'JavaScript', "Bootstrap", "Tailwind", "React.js", "Next.js"];
 
 const About = () => {
   return (
