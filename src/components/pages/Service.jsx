@@ -59,18 +59,15 @@ const Service = () => {
           Here are the services I provide to help grow your business.
         </p>
 
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
           {services.map((service, index) => (
             <motion.div
               key={index}
               className="relative p-6 rounded-xl bg-gray-800 border border-gray-600 flex flex-col items-center text-center overflow-hidden"
-              whileHover={{ scale: 1.05 }}
+              whileHover={{ scale: 1.25, rotateX: -20, translateY: -20 }}
             >
-   
               <motion.div className="absolute inset-0 border-[3px] rounded-xl border-gray-600" />
 
- 
               <motion.div
                 className="absolute inset-0 rounded-xl blur-xl opacity-60"
                 style={{
@@ -81,7 +78,6 @@ const Service = () => {
                 transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
               ></motion.div>
 
-        
               <motion.div
                 className="absolute inset-0 rounded-xl border-[3px]"
                 animate={{
@@ -90,7 +86,6 @@ const Service = () => {
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
               />
 
-              
               <div className={`relative z-10 text-5xl p-4 rounded-full bg-gradient-to-r ${service.color} text-white`}>
                 {service.icon}
               </div>
@@ -101,7 +96,6 @@ const Service = () => {
         </div>
       </div>
     </div>
-
   );
 };
 

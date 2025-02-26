@@ -43,7 +43,7 @@ const projects = [
     title: "Weather APP",
     description: "A sleek Figma Design showcasing my skills and projects.",
     image: "/app.png",
-    link: "https://weather-app-flax-three-51.vercel.app/",
+    link: "https://weather-app-swart-seven-92.vercel.app/",
   },
   {
     title: "Theory",
@@ -79,10 +79,25 @@ const Portfolio = () => {
             className="p-4 bg-gray-800 rounded-xl shadow-lg border border-gray-600 relative overflow-hidden"
             whileHover={{ scale: 1.05 }}
           >
-            <motion.div className="absolute inset-0 border-2 rounded-xl border-gray-600" />
+            {/* Border Glow Effect */}
             <motion.div
-              className="absolute w-6 h-6 bg-yellow-500 rounded-full shadow-2xl"
-              style={{ filter: "blur(8px)" }}
+              className="absolute inset-0 rounded-xl"
+              style={{
+                background: 
+                  "conic-gradient(from 0deg at 50% 50%, rgba(0,255,255,0.3), rgba(255,0,255,0.3), rgba(255,255,0,0.3))",
+                filter: "blur(20px)",
+              }}
+              animate={{ rotate: 360 }}
+              transition={{
+                duration: 2,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+            />
+            
+            {/* Moving Border Dot Effect */}
+            <motion.div
+              className="absolute w-4 h-4 bg-white rounded-full shadow-lg"
               animate={{
                 x: ["0%", "100%", "100%", "0%", "0%"],
                 y: ["0%", "0%", "100%", "100%", "0%"],
@@ -93,27 +108,20 @@ const Portfolio = () => {
                 ease: "linear",
               }}
             />
-            <motion.div
-              className="absolute inset-0 rounded-xl opacity-20"
-              animate={{
-                background: [
-                  "linear-gradient(0deg, rgba(255,255,0,0.3), rgba(255,255,0,0))",
-                  "linear-gradient(90deg, rgba(0,255,255,0.3), rgba(0,255,255,0))",
-                  "linear-gradient(180deg, rgba(255,0,255,0.3), rgba(255,0,255,0))",
-                  "linear-gradient(270deg, rgba(255,255,0,0.3), rgba(255,255,0,0))",
-                ],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                ease: "linear",
-              }}
-            />
+            
+            {/* Main Content */}
             <div className="relative z-10">
-              <img src={project.image} alt={project.title} className="w-full rounded-lg" />
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="w-full rounded-lg h-48 object-cover"
+              />
               <h3 className="text-xl font-semibold mt-4">{project.title}</h3>
               <p className="text-gray-400 mt-2">{project.description}</p>
-              <a href={project.link} className="inline-block mt-3 text-blue-400 hover:underline">
+              <a 
+                href={project.link} 
+                className="inline-block mt-3 text-blue-400 hover:underline"
+              >
                 View Project →
               </a>
             </div>
