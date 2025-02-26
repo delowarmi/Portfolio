@@ -16,7 +16,7 @@ const Footer = () => {
           </div>
 
           {/* Navigation Links */}
-          <div className="lg:ml-28 text-center">
+          <div className="lg:ml-22 text-center">
             <h3 className="text-lg font-bold text-white ">Quick Links</h3>
             <ul className="mt-2 space-y-1">
               <li><a href="#" className="hover:text-orange-400">Home</a></li>
