@@ -7,6 +7,8 @@ import About from "./About";
 import Service from "./Service";
 import Portfolio from "./Portfolio";
 import Contact from "./Contact";
+import Skills from "../Skills";
+import TechnologySkills from "../TechnologySkills";
 
 const skills = ["HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "React.js", "Next.js"];
 const projects = [
@@ -79,7 +81,7 @@ const Home = () => {
 
       {/* Skills Section */}
       <div className="bg-gray-900">
-      <section className="text-center ">
+      <section className="text-center container max-w-[1120px] mx-auto border py-6">
         <h2 className="text-2xl text-white font-semibold mb-4">Skills</h2>
         <div className="flex justify-center gap-4 flex-wrap">
           {skills.map((skill, index) => (
@@ -94,6 +96,8 @@ const Home = () => {
           ))}
         </div>
       </section>
+      <div id="skills"><Skills/></div>
+      <div id="technologySkills"><TechnologySkills/></div>
 
       {/* Projects Section */}
       <section className="mt-10 text-center">
@@ -118,6 +122,7 @@ const Home = () => {
       <div id="services"><Service /></div>
       <div id="portfolio"><Portfolio /></div>
       <div id="contact"><Contact /></div>
+      
 
       {/* Scroll Progress Indicator  */}
       <div className="fixed bottom-10 right-10 z-50">
