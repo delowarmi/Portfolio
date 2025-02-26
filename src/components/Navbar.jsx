@@ -58,7 +58,7 @@ const Navbar = () => {
                 Md Delowar
               </text>
               <text
-                x="110"
+                x="115"
                 y="30"
                 fontFamily="Arial, sans-serif"
                 fontSize="18"
