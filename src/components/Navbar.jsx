@@ -1,17 +1,42 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  // Scroll event listener
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 150) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="bg-gray-900 py-4 px-6 z-40">
-      <div className="max-w-[1320px] mx-auto flex justify-between items-center">
+    <motion.nav
+      initial={{ y: 0, opacity: 1 }}
+      animate={{ y: isScrolled ? 0 : -20, opacity: isScrolled ? 1 : 0.9 }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled ? "bg-gray-900 shadow-lg py-0" : "bg-transparent py-4"
+      }`}
+    >
+      <div className="max-w-[1320px] mx-auto flex justify-between items-center px-6">
         {/* Logo */}
         <Link to="/" className="text-white text-2xl font-bold">
           <div className="flex items-center justify-center h-20">
@@ -52,7 +77,7 @@ const Navbar = () => {
           </div>
         </Link>
 
-        {/* Desktop Menu (lg থেকে বড় হলে দেখাবে) */}
+        {/* Desktop Menu */}
         <div className="hidden lg:flex flex-1 justify-center">
           <ul className="flex space-x-6">
             <NavItem to="/" label="Home" />
@@ -63,7 +88,7 @@ const Navbar = () => {
           </ul>
         </div>
 
-        {/* Hire Me Button (lg স্ক্রিনে দেখাবে) */}
+        {/* Hire Me Button */}
         <div className="hidden lg:block">
           <Link to="mailto:md48735002@gmail.com">
             <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-5 rounded-lg transition-all duration-300">
@@ -72,15 +97,15 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button (sm & md স্ক্রিনে দেখাবে) */}
+        {/* Mobile Menu Button */}
         <button onClick={toggleNavbar} className="block lg:hidden text-white">
           {isOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
       </div>
 
-      {/* Mobile Menu (sm & md স্ক্রিনে দেখাবে) */}
+      {/* Mobile Menu */}
       <div
-        className={`lg:hidden absolute z-50 top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
+        className={`lg:hidden absolute top-16 left-0 w-full bg-gray-800 transition-all duration-300 ${
           isOpen ? "h-auto opacity-100 py-4" : "h-0 opacity-0 overflow-hidden"
         }`}
       >
@@ -101,7 +126,7 @@ const Navbar = () => {
           </div>
         </ul>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 
